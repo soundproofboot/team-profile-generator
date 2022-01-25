@@ -60,12 +60,6 @@ const team = {
         }
         console.log(teamArray);
     },
-
-
 }
 
-team.build();
-
-// console.log(team.addManager(mockManager));
-// console.log(team.addEngineer(mockEngineer));
-// console.log(team.addIntern(mockIntern));
+module.exports = team;
