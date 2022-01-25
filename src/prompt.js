@@ -175,5 +175,9 @@ async function addTeamMembers(arr) {
         return;
     }
 }
-
-getAnswers().then(x => console.log(x));
+let teamData = {};
+getAnswers().then(x => {
+  teamData = x;
+  console.log('Data was retrieved and this is your team: ');
+  }
+);
