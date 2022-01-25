@@ -21,6 +21,9 @@ let firstQuestions = [
     name: "managerOfficeNumber",
     message: "What is the manager's office number?",
   },
+];
+
+let menuConfirm = [
   {
     type: "confirm",
     name: "addMore",
@@ -132,23 +135,21 @@ let followUpQs = [
       }
     },
   },
-  {
-    type: "confirm",
-    name: "addMore",
-    message: "Would you like to add more employees to the team profile?",
-    default: true,
-  },
 ];
 
 async function getAnswers() {
     let team = {};
     let managerData = await getManager();
     team.managerData = managerData;
-    if (managerData.addMore) {
-        let additionalData = await getEmployee();
-        team.employee = [additionalData];
+    team.employees = [];
+    let menuCheck = await menu();
+
+    if (menuCheck.addMore) {
+        await addTeamMembers(team.employees);
+        return team;
+    } else {
+        return team;
     }
-    return team;
 }
 
 function getManager() {
@@ -159,6 +160,20 @@ function getEmployee() {
     return inquirer.prompt(followUpQs);
 }
 
+function menu() {
+    return inquirer.prompt(menuConfirm);
+}
 
+async function addTeamMembers(arr) {
+    let employee = await getEmployee();
+    arr.push(employee);
+
+    let menuCheck = await menu();
+    if (menuCheck.addMore) {
+        await addTeamMembers(arr);
+    } else {
+        return;
+    }
+}
 
 getAnswers().then(x => console.log(x));
