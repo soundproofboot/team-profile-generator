@@ -13,5 +13,5 @@ test("check properties on Intern instance", () => {
 test("check getSchool() method on intern", () => {
   let intern = new Intern("test name", 1234, "test@test.com", "test school");
 
-  expect(inter.getSchool()).toBe("test school");
+  expect(intern.getSchool()).toBe("test school");
 });
