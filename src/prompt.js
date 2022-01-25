@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 
-let myTeam = {
+let prompt = {
   firstQuestions: [
     {
       type: "input",
@@ -178,7 +178,9 @@ let myTeam = {
   },
 };
 
-myTeam.getAnswers().then(ans => console.log(ans));
+// prompt.getAnswers().then(ans => console.log(ans));
+
+module.exports = prompt;
 
 // let firstQuestions = [
 //   {
