@@ -46,7 +46,6 @@ const team = {
         let data = await prompt.getAnswers();
         teamArray.push(this.addManager(data.managerData));
         let employeeArray = data.employees;
-        console.log(employeeArray);
         for (employee of employeeArray) {
             if (employee.whichEmployee === 'Engineer') {
                 let engineer = this.addEngineer(employee);
@@ -58,7 +57,7 @@ const team = {
                 }
             }
         }
-        console.log(teamArray);
+        return teamArray;
     },
 }
 
