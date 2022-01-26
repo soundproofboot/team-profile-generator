@@ -1,0 +1,60 @@
+:root {
+  --header-text-color: rgb(218, 218, 218);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial";
+}
+
+header {
+  height: 20vh;
+  background-color: rgb(29, 29, 197);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  color: var(--header-text-color);
+}
+
+main {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: 5vh auto;
+  justify-content: center;
+}
+
+h2,
+h3 {
+  color: var(--header-text-color);
+  background-color: rgb(27, 92, 233);
+  padding: 5px;
+  padding-left: 3vh;
+}
+
+h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 2vh;
+}
+
+section {
+  border: 1px solid black;
+  margin: 2vh;
+  width: 250px;
+}
+
+div {
+  margin: 2vh;
+  border: 1px solid rgba(0, 0, 0, 0.425);
+}
+
+div * {
+  margin-left: 1vh;
+  margin-top: 2vh;
+}

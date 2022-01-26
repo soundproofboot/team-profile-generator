@@ -9,9 +9,9 @@ const html = {
     <h2>${name}</h2>
     <h3>${role}</h3>
     <div>
-    <p>${id}</p>
-    <p><a href="mailto:${email}">${email}</a></p>
-    <p>${officeNumber}</p>
+    <p>Worker ID: ${id}</p>
+    <p>Email: <a href="mailto:${email}">${email}</a></p>
+    <p>Office Number: ${officeNumber}</p>
     </div>
     </section>
     `;
@@ -25,9 +25,9 @@ const html = {
     <h2>${name}</h2>
     <h3>${role}</h3>
     <div>
-    <p>${id}</p>
-    <p><a href="mailto:${email}">${email}</a></p>
-    <p><a href="https://github.com/${github}" target="_blank">${github}</a></p>
+    <p>Worker ID: ${id}</p>
+    <p>Email: <a href="mailto:${email}">${email}</a></p>
+    <p>GitHub: <a href="https://github.com/${github}" target="_blank">${github}</a></p>
     </div>
     </section>
     `;
@@ -41,9 +41,9 @@ const html = {
     <h2>${name}</h2>
     <h3>${role}</h3>
     <div>
-    <p>${id}</p>
-    <p><a href="mailto:${email}">${email}</a></p>
-    <p>${school}</p>
+    <p>Worker ID: ${id}</p>
+    <p>Email: <a href="mailto:${email}">${email}</a></p>
+    <p>School: ${school}</p>
     </div>
     </section>
     `;
@@ -75,13 +75,16 @@ const html = {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>My Team</title>
     </head>
     <body>
     <header>
     <h1>My Team</h1>
     </header>
+    <main>
     ${employeeHTML}
+    </main>
     </body>
     </html>
     `;
