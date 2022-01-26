@@ -1,13 +1,4 @@
 const team = require("./team");
-const Manager = require("../lib/Manager");
-const Engineer = require("../lib/Engineer");
-const Intern = require("../lib/Intern");
-
-let mockManager = new Manager("dave", 1, "dodo", 2);
-let mockEngineer = new Engineer("steve", 2, "email", "baby");
-let mockIntern = new Intern("josh", 3, "emailforjosh", "schoolplace");
-
-let mockArray = [mockManager, mockEngineer, mockIntern];
 
 const html = {
   managerHTML(managerObj) {
@@ -66,7 +57,7 @@ const html = {
       } else if (empl.getRole() === "Engineer") {
         htmlString += this.engineerHTML(empl);
       } else {
-        htmlString += this.internHTML;
+        htmlString += this.internHTML(empl);
       }
     }
     return htmlString;
@@ -95,8 +86,5 @@ const html = {
     return htmlString;
   },
 };
-
-
-html.buildPage().then(x => console.log(x));
 
 module.exports = html;

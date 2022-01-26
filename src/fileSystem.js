@@ -1,3 +1,3 @@
 const fs = require('fs');
+const html = require('./html');
 
-console.log(fs.write);
