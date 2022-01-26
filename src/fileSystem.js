@@ -12,4 +12,4 @@ const file = {
     }
 }
 
-file.createHTML();
+module.exports = file;

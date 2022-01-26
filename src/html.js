@@ -10,7 +10,7 @@ const html = {
     <h3>${role}</h3>
     <div>
     <p>${id}</p>
-    <p>${email}</p>
+    <p><a href="mailto:${email}">${email}</a></p>
     <p>${officeNumber}</p>
     </div>
     </section>
@@ -26,8 +26,8 @@ const html = {
     <h3>${role}</h3>
     <div>
     <p>${id}</p>
-    <p>${email}</p>
-    <p>${github}</p>
+    <p><a href="mailto:${email}">${email}</a></p>
+    <p><a href="https://github.com/${github}" target="_blank">${github}</a></p>
     </div>
     </section>
     `;
@@ -42,7 +42,7 @@ const html = {
     <h3>${role}</h3>
     <div>
     <p>${id}</p>
-    <p>${email}</p>
+    <p><a href="mailto:${email}">${email}</a></p>
     <p>${school}</p>
     </div>
     </section>
@@ -78,7 +78,9 @@ const html = {
     <title>My Team</title>
     </head>
     <body>
-    <header>My Team</header>
+    <header>
+    <h1>My Team</h1>
+    </header>
     ${employeeHTML}
     </body>
     </html>
