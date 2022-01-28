@@ -23,6 +23,8 @@ Clone this repo. Then run 'npm install' in the terminal. Once the dependencies h
 ## Usage
 You will first receive prompts for all of the manager's information, after which you have the option to add more members or to finish the profile. If you choose to add more members, choose either engineer or intern. After you've responded to all of the prompts, an HTML file will be created in the 'dist' folder containing all of the information provided. A style sheet is also provided in the dist folder.
 
+Click [here](https://drive.google.com/file/d/1PudI5mV4lwUla9WuPXj82boMVLxHb6mR/view?usp=sharing) for a full video walkthrough.
+
 ## Contributing
 This application uses the npm packages 'inquirer' to handle the prompts, and 'jest' to handle testing.
 
